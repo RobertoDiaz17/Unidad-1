@@ -1,0 +1,18 @@
+from abc import ABC, abstractmethod
+
+class Persona(ABC):
+    @property
+    @abstractmethod
+    def nombre(self):
+        pass
+
+class Estudiante(Persona):
+    def __init__(self, nombre):
+        self._nombre = nombre
+
+    @property
+    def nombre(self):
+        return self._nombre
+
+estudiante = Estudiante("Juan")
+print(estudiante.nombre) # Imprime "Juan"

@@ -1,0 +1,31 @@
+class Persona:
+    def __init__(self, nombre, edad):
+        self._nombre = nombre
+        self.__edad = edad
+
+    def get_edad(self):
+        return self.__edad
+
+    def set_edad(self, edad):
+        if edad < 0:
+            print("La edad no puede ser negativa")
+        else:
+            self.__edad = edad
+
+    def hablar(self):
+        print("Hola, me llamo", self._nombre, "y tengo", self.__edad, "años.")
+
+
+juan = Persona("Juan", 25)
+
+
+print(juan._nombre)
+print(juan._Persona__edad)
+
+
+print(juan.get_edad())
+juan.set_edad(30)
+print(juan.get_edad())
+
+
+juan.hablar()

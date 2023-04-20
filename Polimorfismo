@@ -1,0 +1,20 @@
+# Definimos la clase Animal con un método hacer_sonido
+class Animal:
+    def hacer_sonido(self):
+        print("El Animal Hace Un Sonido")
+
+
+class Perro(Animal):
+    def hacer_sonido(self):
+        print("El Perro Ladra")
+
+
+class Gato(Animal):
+    def hacer_sonido(self):
+        print("El Gato Maulla")
+
+animales = [Animal(), Perro(), Gato()]
+
+
+for animal in animales:
+    animal.hacer_sonido()
